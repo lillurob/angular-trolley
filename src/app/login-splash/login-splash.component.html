@@ -1,0 +1,25 @@
+<h3> Login Page </h3>
+
+<p>New User:</p>
+<a routerLink="/vendorSignUp">Sign up as Shop Owner</a><p></p>
+<a routerLink="/shopperSignUp">Sign up as Shopper</a>
+<p>Log In:</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+
+  <div>
+    <label for="username">
+      Username
+    </label>
+    <input id="username" type="text" formControlName="username">
+  </div>
+
+  <div>
+    <label for="password">
+      Password
+    </label>
+    <input id="password" type="password" formControlName="password">
+  </div>
+
+  <button class="button" type="submit">Login</button>
+
+</form>
